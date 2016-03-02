@@ -24,6 +24,7 @@
         /// <returns type="Promise">{ then, element }.</returns>
 
         var $modal;
+        var modalClass = 'emodal';
         var bin = 'recycle-bin';
         var div = '<div>';
         var empty = '';
@@ -44,7 +45,7 @@
         var tmpModalContent = 'modal-tmp';
 
         var defaultSettings = {
-            allowContentRecycle: true,
+        	allowContentRecycle: true,
             confirmLabel: 'OK',
             size: empty,
             loadingHtml: '<h5>Loading...</h5><div class=progress><div class="progress-bar progress-bar-striped active" style="width: 100%"></div></div>',
@@ -208,7 +209,7 @@
                 /// <summary></summary>
                 /// <returns type="jQuery object"></returns>
 
-                return $('<div class="modal fade" tabindex="-1"><style>.modal-xl{width:96%;}</style>'
+                return $('<div class="modal ' + modalClass + ' fade" tabindex="-1"><style>.modal-xl{width:96%;}</style>'
                 + '<div class=modal-dialog>'
                 + '<div class=modal-content>'
                 + ' <div class=modal-header><button type=button class="x close" data-dismiss=modal><span aria-hidden=true>&times;</span><span class=sr-only>Close</span></button><h4 class=modal-title></h4></div>'
